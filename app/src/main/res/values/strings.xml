@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Sorc Points</string>
+
+    <string name="increase">+</string>
+    <string name="decrease">-</string>
+    <string name="reset">reset</string>
+
+    <string name="textViewDefault">0</string>
+    <string name="sorcPoints">Sorcery Points</string>
+    <string name="sorcLevel">Sorcerer Level</string>
+    <string name="setup">Set-up</string>
+
+    <string name="metaMagic">Metamagic</string>
+    <string name="flexibleCasting">Flex Casting</string>
+
+</resources>
