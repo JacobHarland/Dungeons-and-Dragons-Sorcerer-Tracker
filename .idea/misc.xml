@@ -4,7 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Jacob/AndroidStudioProjects/SorcPoints/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/Jacob/AndroidStudioProjects/SorcPoints/app/src/main/res/layout/activity_meta_magic_choices.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/Jacob/AndroidStudioProjects/SorcPoints/app/src/main/res/layout/activity_settings_page02.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Jacob/AndroidStudioProjects/SorcPoints/app/src/main/res/layout/layout_flexcast_sorc_to_spells_dialog.xml" value="0.5" />
+        <entry key="..\:/Users/Jacob/AndroidStudioProjects/SorcPoints/app/src/main/res/layout/layout_flexcast_spell_to_sorc_dialog.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Jacob/AndroidStudioProjects/SorcPoints/app/src/main/res/layout/layout_flexible_casting_dialog.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Jacob/AndroidStudioProjects/SorcPoints/app/src/main/res/layout/layout_metamagic_dialog.xml" value="0.5541666666666667" />
       </map>
     </option>
   </component>

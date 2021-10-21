@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SorcPoints">
         <activity
+            android:name=".MetaMagicChoices"
+            android:exported="true" />
+        <activity
             android:name=".SettingsPage02"
             android:exported="true" />
         <activity

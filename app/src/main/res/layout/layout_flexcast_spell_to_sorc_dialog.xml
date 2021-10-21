@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/flexibleCastingFirstLevelSpellSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/flexSpellToSorceryPoints_1"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/flexibleCastingSecondLevelSpellSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flexibleCastingFirstLevelSpellSlot"
+        android:text="@string/flexSpellToSorceryPoints_2"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/flexibleCastingThirdLevelSpellSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flexibleCastingSecondLevelSpellSlot"
+        android:text="@string/flexSpellToSorceryPoints_3"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/flexibleCastingFourthLevelSpellSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flexibleCastingThirdLevelSpellSlot"
+        android:text="@string/flexSpellToSorceryPoints_4"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/flexibleCastingFifthLevelSpellSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flexibleCastingFourthLevelSpellSlot"
+        android:text="@string/flexSpellToSorceryPoints_5"
+        android:textSize="20sp" />
+
+</RelativeLayout>

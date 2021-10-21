@@ -1,16 +1,40 @@
 <resources>
-    <string name="app_name">Sorc Points</string>
+    <string name="app_name">Sorcery Points</string>
 
     <string name="increase">+</string>
     <string name="decrease">-</string>
     <string name="reset">reset</string>
 
     <string name="textViewDefault">0</string>
-    <string name="sorcPoints">Sorcery Points</string>
-    <string name="sorcLevel">Sorcerer Level</string>
+    <string name="sorceryPoints">Sorcery Points</string>
+    <string name="sorceryLevel">Sorcerer Level</string>
     <string name="setup">Set-up</string>
 
     <string name="metaMagic">Metamagic</string>
-    <string name="flexibleCasting">Flex Casting</string>
+    <string name="flexibleCastingGainSpellSlot">Flex Casting Gain Spell Slot</string>
+    <string name="flexibleCastingGainSorceryPoint">Flex Casting Gain Sorcery Point</string>
 
+    Strings in layout_flexible_casting_dialog
+    <string name="flexSorceryPointsToSpell_1">Convert 2 Sorcery Points for a 1st Level Spell Slot</string>
+    <string name="flexSorceryPointsToSpell_2">Convert 3 Sorcery Points for a 2nd Level Spell Slot</string>
+    <string name="flexSorceryPointsToSpell_3">Convert 5 Sorcery Points for a 3rd Level Spell Slot</string>
+    <string name="flexSorceryPointsToSpell_4">Convert 6 Sorcery Points for a 4th Level Spell Slot</string>
+    <string name="flexSorceryPointsToSpell_5">Convert 7 Sorcery Points for a 5th Level Spell Slot</string>
+
+    Strings in spells to sorc point dialog
+    <string name="flexSpellToSorceryPoints_1">Convert a 1st Level Spell Slot for 2 Sorcery Points</string>
+    <string name="flexSpellToSorceryPoints_2">Convert a 2nd Level Spell Slot for 3 Sorcery Points</string>
+    <string name="flexSpellToSorceryPoints_3">Convert a 3rd Level Spell Slot for 5 Sorcery Points</string>
+    <string name="flexSpellToSorceryPoints_4">Convert a 4th Level Spell Slot for 6 Sorcery Points</string>
+    <string name="flexSpellToSorceryPoints_5">Convert a 5th Level Spell Slot for 7 Sorcery Points</string>
+
+    Strings in metamagic dialog
+    <string name="carefulSpell">Careful Spell: 1SP</string>
+    <string name="distantSpell">Distant Spell: 1SP</string>
+    <string name="empoweredSpell">Empowered Spell: 1SP</string>
+    <string name="extendedSpell">Extended Spell: 1SP</string>
+    <string name="heightenedSpell">Heightened Spell: 3SP</string>
+    <string name="quickenedSpell">Quickened Spell: 2SP</string>
+    <string name="subtleSpell">Subtle Spell: 1SP</string>
+    <string name="twinnedSpell">Twin Spell: 1SP per level</string>
 </resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/carefulSpell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/carefulSpell"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/distantSpell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carefulSpell"
+        android:text="@string/distantSpell"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/empoweredSpell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distantSpell"
+        android:text="@string/empoweredSpell"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/extendedSpell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/empoweredSpell"
+        android:text="@string/extendedSpell"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/heightenedSpell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/extendedSpell"
+        android:text="@string/heightenedSpell"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/quickenedSpell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heightenedSpell"
+        android:text="@string/quickenedSpell"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/subtleSpell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quickenedSpell"
+        android:text="@string/subtleSpell"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/twinnedSpell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtleSpell"
+        android:text="@string/twinnedSpell"
+        android:textSize="20sp" />
+
+</RelativeLayout>

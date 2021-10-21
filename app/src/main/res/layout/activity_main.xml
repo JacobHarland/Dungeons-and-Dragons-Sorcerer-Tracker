@@ -13,14 +13,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.16000003">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/increase"
+                android:id="@+id/button_increase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/increase"
@@ -32,7 +33,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/decrease"
+                android:id="@+id/button_decrease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/decrease"
@@ -44,11 +45,10 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/reset"
+                android:id="@+id/button_reset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:onClick="resetTextView"
                 android:text="@string/reset"
                 android:textSize="20sp" />
 
@@ -72,14 +72,14 @@
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_marginTop="52dp"
-        android:text="@string/sorcPoints"
+        android:text="@string/sorceryPoints"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/settings"
+        android:id="@+id/button_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -88,35 +88,39 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
-        android:layout_width="336dp"
-        android:layout_height="128dp"
-        android:stretchColumns="0,1"
+        android:layout_width="350dp"
+        android:layout_height="145dp"
         android:layout_gravity="center"
+        android:stretchColumns="0,1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.482">
 
 
+        <Button
+            android:id="@+id/button_flexibleCastingGainSorceryPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flexibleCastingGainSorceryPoint" />
 
-        <TableRow android:layout_width="match_parent">
 
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="125dp"
-                android:layout_height="72dp"
-                android:layout_margin="9dp"
-                android:text="@string/metaMagic"
-                android:textSize="14sp" />
+        <Button
+            android:id="@+id/button_flexibleCastingGainSpellSlot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flexibleCastingGainSpellSlot"
+            android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/button18"
-                android:layout_width="125dp"
-                android:layout_height="72dp"
-                android:layout_margin="9dp"
-                android:text="@string/flexibleCasting"
-                android:textSize="14sp" />
-        </TableRow>
+        <Button
+            android:id="@+id/button_metaMagic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/metaMagic"
+            android:textSize="14sp" />
+
     </TableLayout>
 
 

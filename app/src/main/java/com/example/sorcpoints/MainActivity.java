@@ -1,23 +1,28 @@
 package com.example.sorcpoints;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
-    private TextView textView;
+    public static TextView textView;
 
-    private Button settingsButton;
     private Button increaseButton;
     private Button decreaseButton;
     private Button resetButton;
+    private Button settingsButton;
+    private Button metaMagicButton;
+    private Button flexibleCastingButtonGainSpellSlot;
+    private Button flexibleCastingButtonGainSorceryPoint;
 
-    int sorcLevel;
+    Context context;
+
+    private String sorcPoints;
+    private int sorcLevelSaved;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,44 +31,48 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView);
 
-        increaseButton = findViewById(R.id.increase);
-        decreaseButton = findViewById(R.id.decrease);
-        resetButton = findViewById(R.id.reset);
-        settingsButton = findViewById(R.id.settings);
+        //loads the saved data
+        sorcPoints = PrefConfig.loadTextViewFromPref(this);
+        textView.setText(String.valueOf(sorcPoints));
+        sorcLevelSaved = PrefConfig.loadSorcLevelFromPref(this);
+
+        increaseButton = findViewById(R.id.button_increase);
+        decreaseButton = findViewById(R.id.button_decrease);
+        resetButton = findViewById(R.id.button_reset);
+        settingsButton = findViewById(R.id.button_settings);
+        metaMagicButton = findViewById(R.id.button_metaMagic);
+        flexibleCastingButtonGainSpellSlot = findViewById(R.id.button_flexibleCastingGainSpellSlot);
+        flexibleCastingButtonGainSorceryPoint = findViewById(R.id.button_flexibleCastingGainSorceryPoint);
+
+        context = this;
 
         //Method for the button that adds 1 when pressed
-        increaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String newText = Integer.toString(Integer.parseInt(textView.getText().toString()) + 1);
+        increaseButton.setOnClickListener(view -> {
+            String newText = Integer.toString(Integer.parseInt(textView.getText().toString()) + 1);
+            PrefConfig.saveTotalInPref(getApplicationContext(), newText);
+            textView.setText(newText);
+        });
+
+        //Method for the button that subtracts 1 when pressed
+        decreaseButton.setOnClickListener(view -> {
+            if (Integer.parseInt(textView.getText().toString()) != 0) {
+                String newText = Integer.toString(Integer.parseInt(textView.getText().toString()) - 1);
+                PrefConfig.saveTotalInPref(getApplicationContext(), newText);
                 textView.setText(newText);
             }
         });
 
-        //Method for the button that subtracts 1 when pressed
-        decreaseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (Integer.parseInt(textView.getText().toString()) != 0) {
-                    String newText = Integer.toString(Integer.parseInt(textView.getText().toString()) - 1);
-                    textView.setText(newText);
-                }
-            }
+        //Method for the button that resets the counter to sorcLevel
+        resetButton.setOnClickListener(view -> {
+            int sorcLevel = sorcLevelSaved;
+            PrefConfig.saveTotalInPref(getApplicationContext(), String.valueOf(sorcLevel));
+            textView.setText(String.valueOf(sorcLevel));
         });
 
-        //Opens the settings page
-        settingsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSettingsPage02();
-            }
-        });
-
-        //Calls Activity 2's sorcLevel value and then sets it as the textView
-        Intent mIntent = getIntent();
-        int sorcLevel = mIntent.getIntExtra("textView", 0);
-        textView.setText(String.valueOf(sorcLevel));
-
+        settingsButton.setOnClickListener(view -> openSettingsPage02());
+        flexibleCastingButtonGainSpellSlot.setOnClickListener(view -> openFlexibleCastingDialog());
+        flexibleCastingButtonGainSorceryPoint.setOnClickListener(view -> openFlexibleCastingDialog2());
+        metaMagicButton.setOnClickListener(view -> metaMagicDialog());
     }
 
     //Opens the settings page
@@ -72,10 +81,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void resetTextView (View view){
-        //textView.setText("0");
-        Intent mIntent = getIntent();
-        int sorcLevel = mIntent.getIntExtra("textView", 0);
-        textView.setText(String.valueOf(sorcLevel));
+    public void openFlexibleCastingDialog() {
+        SorcToSpellDialog sorcToSpellDialog = new SorcToSpellDialog();
+        sorcToSpellDialog.show(getSupportFragmentManager(), "example dialog");
+    }
+
+    public void openFlexibleCastingDialog2() {
+        SpellToSorcDialog spellToSorcDialog = new SpellToSorcDialog();
+        spellToSorcDialog.show(getSupportFragmentManager(), "example dialog");
+    }
+
+    public void metaMagicDialog() {
+        MetaMagicDialog metaMagicDialog = new MetaMagicDialog();
+        metaMagicDialog.show(getSupportFragmentManager(), "example dialog");
     }
 }
+

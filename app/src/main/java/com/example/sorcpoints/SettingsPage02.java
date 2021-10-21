@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -19,24 +17,19 @@ public class SettingsPage02 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_page02);
 
-        sorcLevelInput = (EditText) findViewById(R.id.sorcLevelInput);
+        sorcLevelInput = findViewById(R.id.sorcLevelInput);
 
-        submitButton = (Button) findViewById(R.id.submitButton);
+        submitButton = findViewById(R.id.submitButton);
 
         //On button press, saves data and passes it to the main screen to show the values
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(SettingsPage02.this, MainActivity.class);
+        submitButton.setOnClickListener(view -> {
+            Intent myIntent = new Intent(SettingsPage02.this, MainActivity.class);
 
-                int sorcLevel = Integer.parseInt(sorcLevelInput.getText().toString());
-
-                myIntent.putExtra("textView", sorcLevel);
-                startActivity(myIntent);
-                finish();
-            }
+            int sorcLevel = Integer.parseInt(sorcLevelInput.getText().toString());
+            PrefConfig.saveSorcLevelPref(getApplicationContext(), sorcLevel);
+            myIntent.putExtra("textView", sorcLevel);
+            startActivity(myIntent);
+            finish();
         });
-
-
     }
 }
