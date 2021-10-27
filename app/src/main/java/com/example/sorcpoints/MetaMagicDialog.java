@@ -37,59 +37,75 @@ public class MetaMagicDialog extends AppCompatDialogFragment {
         Button twinnedSpell = view.findViewById(R.id.twinnedSpell);
 
         carefulSpell.setOnClickListener(view1 -> {
-            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
-            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-            MainActivity.textView.setText(newText);
-            dismiss();
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 1) {
+                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
+                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                MainActivity.textView.setText(newText);
+                dismiss();
+            }
         });
 
         distantSpell.setOnClickListener(view12 -> {
-            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
-            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-            MainActivity.textView.setText(newText);
-            dismiss();
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 1) {
+                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
+                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                MainActivity.textView.setText(newText);
+                dismiss();
+            }
         });
 
         empoweredSpell.setOnClickListener(view13 -> {
-            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
-            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-            MainActivity.textView.setText(newText);
-            dismiss();
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 1) {
+                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
+                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                MainActivity.textView.setText(newText);
+                dismiss();
+            }
         });
 
         extendedSpell.setOnClickListener(view14 -> {
-            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
-            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-            MainActivity.textView.setText(newText);
-            dismiss();
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 1) {
+                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
+                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                MainActivity.textView.setText(newText);
+                dismiss();
+            }
         });
 
         heightenedSpell.setOnClickListener(view15 -> {
-            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 3);
-            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-            MainActivity.textView.setText(newText);
-            dismiss();
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 3) {
+                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 3);
+                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                MainActivity.textView.setText(newText);
+                dismiss();
+            }
         });
 
         quickenedSpell.setOnClickListener(view13 -> {
-            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 2);
-            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-            MainActivity.textView.setText(newText);
-            dismiss();
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 2) {
+                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 2);
+                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                MainActivity.textView.setText(newText);
+                dismiss();
+            }
         });
 
         subtleSpell.setOnClickListener(view14 -> {
-            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
-            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-            MainActivity.textView.setText(newText);
-            dismiss();
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 1) {
+                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 1);
+                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                MainActivity.textView.setText(newText);
+                dismiss();
+            }
         });
 
         twinnedSpell.setOnClickListener(view15 -> {
-            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 10);
-            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-            MainActivity.textView.setText(newText);
-            dismiss();
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 10) {
+                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 10);
+                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                MainActivity.textView.setText(newText);
+                dismiss();
+            }
         });
         return builder.create();
     }
