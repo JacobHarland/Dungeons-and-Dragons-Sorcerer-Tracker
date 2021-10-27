@@ -34,48 +34,38 @@ public class SpellToSorcDialog extends AppCompatDialogFragment {
         Button flexibleCastingFifthLevelSpellSlot = view.findViewById(R.id.flexibleCastingFifthLevelSpellSlot);
 
         flexibleCastingFirstLevelSpellSlot.setOnClickListener(view1 -> {
-            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 5) {
-                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 2);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-                MainActivity.textView.setText(newText);
-                dismiss();
-            }
+            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 2);
+            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+            MainActivity.textView.setText(newText);
+            dismiss();
         });
 
         flexibleCastingSecondLevelSpellSlot.setOnClickListener(view12 -> {
-            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 5) {
-                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 3);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-                MainActivity.textView.setText(newText);
-                dismiss();
-            }
+            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 3);
+            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+            MainActivity.textView.setText(newText);
+            dismiss();
         });
 
         flexibleCastingThirdLevelSpellSlot.setOnClickListener(view13 -> {
-            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 5) {
-                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 5);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-                MainActivity.textView.setText(newText);
-                dismiss();
-            }
+            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 5);
+            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+            MainActivity.textView.setText(newText);
+            dismiss();
         });
 
         flexibleCastingFourthLevelSpellSlot.setOnClickListener(view14 -> {
-            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 5) {
-                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 6);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-                MainActivity.textView.setText(newText);
-                dismiss();
-            }
+            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 6);
+            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+            MainActivity.textView.setText(newText);
+            dismiss();
         });
 
         flexibleCastingFifthLevelSpellSlot.setOnClickListener(view15 -> {
-            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 5) {
-                String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 7);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
-                MainActivity.textView.setText(newText);
-                dismiss();
-            }
+            String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) + 7);
+            PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+            MainActivity.textView.setText(newText);
+            dismiss();
         });
 
         return builder.create();
