@@ -7,21 +7,10 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity implements SpellLevelDialog.SpellLevelDialogListener {
 
     public static TextView textView;
-
-    private Button increaseButton;
-    private Button decreaseButton;
-    private Button resetButton;
-    private Button settingsButton;
-    private Button metaMagicButton;
-    private Button flexibleCastingButtonGainSpellSlot;
-    private Button flexibleCastingButtonGainSorceryPoint;
-
     Context context;
-
-    private String sorcPoints;
     private int sorcLevelSaved;
 
     @Override
@@ -32,17 +21,17 @@ public class MainActivity extends AppCompatActivity  {
         textView = findViewById(R.id.textView);
 
         //loads the saved data
-        sorcPoints = PrefConfig.loadTextViewFromPref(this);
+        String sorcPoints = PrefConfig.loadTextViewFromPref(this);
         textView.setText(String.valueOf(sorcPoints));
         sorcLevelSaved = PrefConfig.loadSorcLevelFromPref(this);
 
-        increaseButton = findViewById(R.id.button_increase);
-        decreaseButton = findViewById(R.id.button_decrease);
-        resetButton = findViewById(R.id.button_reset);
-        settingsButton = findViewById(R.id.button_settings);
-        metaMagicButton = findViewById(R.id.button_metaMagic);
-        flexibleCastingButtonGainSpellSlot = findViewById(R.id.button_flexibleCastingGainSpellSlot);
-        flexibleCastingButtonGainSorceryPoint = findViewById(R.id.button_flexibleCastingGainSorceryPoint);
+        Button increaseButton = findViewById(R.id.button_increase);
+        Button decreaseButton = findViewById(R.id.button_decrease);
+        Button resetButton = findViewById(R.id.button_reset);
+        Button settingsButton = findViewById(R.id.button_settings);
+        Button metaMagicButton = findViewById(R.id.button_metaMagic);
+        Button flexibleCastingButtonGainSpellSlot = findViewById(R.id.button_flexibleCastingGainSpellSlot);
+        Button flexibleCastingButtonGainSorceryPoint = findViewById(R.id.button_flexibleCastingGainSorceryPoint);
 
         context = this;
 
@@ -94,6 +83,11 @@ public class MainActivity extends AppCompatActivity  {
     public void metaMagicDialog() {
         MetaMagicDialog metaMagicDialog = new MetaMagicDialog();
         metaMagicDialog.show(getSupportFragmentManager(), "example dialog");
+    }
+
+    @Override
+    public void applyTexts(int spellLevel) {
+        MetaMagicDialog.spellLevel0 = spellLevel;
     }
 }
 

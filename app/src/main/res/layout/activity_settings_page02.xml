@@ -7,16 +7,6 @@
     android:padding="16dp"
     tools:context=".SettingsPage02">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is the settings page"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/sorcLevelInput"
         android:layout_width="224dp"
@@ -25,16 +15,18 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/sorceryLevel"
+        android:importantForAutofill="no"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Submit"
+        android:text="@string/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toEndOf="@+id/sorcLevelInput"

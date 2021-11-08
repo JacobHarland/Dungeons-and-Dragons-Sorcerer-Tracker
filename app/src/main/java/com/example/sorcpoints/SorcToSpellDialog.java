@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -15,9 +16,9 @@ public class SorcToSpellDialog extends AppCompatDialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
 
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+        LayoutInflater inflater = requireActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.layout_flexcast_sorc_to_spells_dialog, null);
 
         builder.setView(view)
@@ -34,7 +35,7 @@ public class SorcToSpellDialog extends AppCompatDialogFragment {
         flexibleCastingFirstLevelSpellSlot.setOnClickListener(view1 -> {
             if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 2) {
                 String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 2);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                PrefConfig.saveTotalInPref(requireActivity().getApplicationContext(), newText);
                 MainActivity.textView.setText(newText);
                 dismiss();
             }
@@ -43,7 +44,7 @@ public class SorcToSpellDialog extends AppCompatDialogFragment {
         flexibleCastingSecondLevelSpellSlot.setOnClickListener(view12 -> {
             if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 3) {
                 String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 3);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                PrefConfig.saveTotalInPref(requireActivity().getApplicationContext(), newText);
                 MainActivity.textView.setText(newText);
                 dismiss();
             }
@@ -52,25 +53,25 @@ public class SorcToSpellDialog extends AppCompatDialogFragment {
         flexibleCastingThirdLevelSpellSlot.setOnClickListener(view13 -> {
             if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 5) {
                 String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 5);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                PrefConfig.saveTotalInPref(requireActivity().getApplicationContext(), newText);
                 MainActivity.textView.setText(newText);
                 dismiss();
             }
         });
 
         flexibleCastingFourthLevelSpellSlot.setOnClickListener(view14 -> {
-            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 5) {
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 6) {
                 String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 6);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                PrefConfig.saveTotalInPref(requireActivity().getApplicationContext(), newText);
                 MainActivity.textView.setText(newText);
                 dismiss();
             }
         });
 
         flexibleCastingFifthLevelSpellSlot.setOnClickListener(view15 -> {
-            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 5) {
+            if (Integer.parseInt(MainActivity.textView.getText().toString()) >= 7) {
                 String newText = Integer.toString(Integer.parseInt(MainActivity.textView.getText().toString()) - 7);
-                PrefConfig.saveTotalInPref(getActivity().getApplicationContext(), newText);
+                PrefConfig.saveTotalInPref(requireActivity().getApplicationContext(), newText);
                 MainActivity.textView.setText(newText);
                 dismiss();
             }

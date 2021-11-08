@@ -9,10 +9,14 @@
     <string name="sorceryPoints">Sorcery Points</string>
     <string name="sorceryLevel">Sorcerer Level</string>
     <string name="setup">Set-up</string>
+    <string name="save">Save</string>
 
     <string name="metaMagic">Metamagic</string>
     <string name="flexibleCastingGainSpellSlot">Flex Casting Gain Spell Slot</string>
     <string name="flexibleCastingGainSorceryPoint">Flex Casting Gain Sorcery Point</string>
+
+    <string name="characterLevel">Enter character level</string>
+    <string name="spellLevel">Enter spell level</string>
 
     Strings in layout_flexible_casting_dialog
     <string name="flexSorceryPointsToSpell_1">Convert 2 Sorcery Points for a 1st Level Spell Slot</string>
